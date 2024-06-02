@@ -1,0 +1,5 @@
+---
+name: Rew Packages
+packages:
+    test.app: github:kevinj045/test-rew-app 
+---
