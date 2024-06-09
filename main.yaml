@@ -1,5 +1,6 @@
 ---
 name: Rew Packages
 packages:
+    rew.gtk: github:kevinj045/rew.gtk
     test.app: github:kevinj045/test-rew-app 
 ---
