@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rew/Pkgs</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Rew Package Finder</h1>
+      <div class="search-bar">
+        <input type="text" id="search-bar" placeholder="Search for packages..."> <div id="loading-spinner" class="loading-spinner"></div>
+      </div>
+    </header>
+    <section id="url-list">
+      <h4>Repos <div class="side"><button id="sync-btn">Sync</button><button id="add-btn">Add</button></div></h4>
+      <!-- URLs can be dynamically added here -->
+      <ul id="packages">
+        <!-- Example list item -->
+      </ul>
+    </section>
+    <section id="results">
+      <!-- Search results will be displayed here -->
+    </section>
+  </div>
+  <script src="showdown.js"></script>
+  <script src="js-yaml.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

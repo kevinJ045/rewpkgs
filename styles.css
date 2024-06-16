@@ -1,0 +1,143 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #ccc;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-bar{
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+#search-bar {
+  width: 100%;
+  background: #222222;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 10px;
+  color: #f4f4f4;
+  border: 1px solid #212121;
+  border-radius: 4px;
+}
+
+#url-list {
+  margin-top: 20px;
+}
+
+#url-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+#url-list li {
+  background-color: #111111;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  border: 1px solid #333333;
+  cursor: pointer;
+}
+
+a{
+  color: lightblue;
+}
+
+#results {
+  margin-top: 20px;
+}
+
+.result-item {
+  background-color: #111111;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #333333;
+}
+
+.result-item .tabs {
+  display: flex;
+  margin-bottom: 10px;
+  gap: 3px;
+}
+
+.result-item .tabs button {
+  padding: 10px;
+  background-color: #323232;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.result-item .tabs button:first-child{
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.result-item .tabs button:last-child{
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.result-item .tabs button.active {
+  background-color: #444444;
+}
+
+.result-item .code-block {
+  padding: 10px;
+  background-color: #444444;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 4px solid lightcoral;
+  border-top-color: transparent;
+  border-radius: 50%;
+  right: -15px;
+  top: calc(50% - 8px);
+  animation: 1s infinite rotate linear;
+  display: none;
+}
+
+@keyframes rotate {
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.tag{
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: lightblue;
+  color: #111111;
+}
+
+.tags .tag:nth-child(odd){
+  background: lightcoral;
+}
+
+.tags {
+  padding: 10px;
+}
