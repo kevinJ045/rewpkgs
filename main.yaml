@@ -1,6 +1,7 @@
 ---
 name: Rew Packages
 packages:
+    rew.rayous: github:kevinj045/rew.rayous
     rew.gtk: github:kevinj045/rew.gtk
     rew.pimmy: github:kevinj045/rew.pimmy
     test.app: github:kevinj045/test-rew-app 
