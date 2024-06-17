@@ -7,23 +7,53 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div id="ilikethis-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="window.location.hash='';">&times;</span>
+      <h3>Thank you!</h3>
+      The color pallette is called <a href="https://github.com/catppuccin/catppuccin">catpuccin</a> and it's the secret behind my style.
+    </div>
+  </div>
+
+  <div id="whatisthis-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="window.location.hash='';">&times;</span>
+      <h2>What is this?</h2>
+      <p>This is a package viewer for <a href="https://github.com/kevinj045/rew">rew</a>. Here you can search for 
+      packages from whatever <a href="https://kevinj045.github.io/rew-docs/pacman.html#repos">repos</a> you want.</p>
+      <br />
+      <p>What is pimmy?</p>
+      <p>If you have read about rayous, you might have noticed that pimmy is not a command that comes with rew, pimmy is a package manager for rew that can be installed using <code>rew install</code>, it makes it easier to search and manage packages in terminal, read more about it by searching <code>rew.pimmy</code>.</p>
+    </div>
+  </div>
+
   <div class="container">
-    <header>
-      <h1>Rew Package Finder</h1>
-      <div class="search-bar">
-        <input type="text" id="search-bar" placeholder="Search for packages..."> <div id="loading-spinner" class="loading-spinner"></div>
+    <div class="main">
+      <div class="content">
+        <header>
+          <h1>📦 Rew Packages</h1>
+          <div class="search-bar">
+            <input type="text" id="search-bar" placeholder="🔍 Search for packages..."> <div id="loading-spinner" class="loading-spinner"></div>
+          </div>
+        </header>
+        <section id="url-list">
+          <h4>📔 Repos <div class="side"><button id="sync-btn">Sync</button>|<button id="all-btn">All</button>|<button id="add-btn">Add</button></div></h4>
+          <!-- URLs can be dynamically added here -->
+          <ul id="packages">
+            <!-- Example list item -->
+          </ul>
+        </section>
       </div>
-    </header>
-    <section id="url-list">
-      <h4>Repos <div class="side"><button id="sync-btn">Sync</button><button id="add-btn">Add</button></div></h4>
-      <!-- URLs can be dynamically added here -->
-      <ul id="packages">
-        <!-- Example list item -->
-      </ul>
-    </section>
-    <section id="results">
-      <!-- Search results will be displayed here -->
-    </section>
+      <div class="bottom">
+        <p>💖 <a href="#ilikethis">I like the style</a></p>
+        <p>🤔 <a href="#whatisthis">What is this?</a></p>
+      </div>
+    </div>
+    <div class="side-2">
+      <section id="results">
+        <!-- Search results will be displayed here -->
+      </section>
+    </div>
   </div>
   <script src="showdown.js"></script>
   <script src="js-yaml.min.js"></script>
