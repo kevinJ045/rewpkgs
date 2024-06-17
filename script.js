@@ -299,6 +299,9 @@ document.addEventListener('DOMContentLoaded', () => {
         lastModal.className = 'modal';
         lastModal.style.display = 'block';
         lastModal.style.zIndex = '998';
+        lastModal.addEventListener('click', (event) => {
+          targetElement.querySelector('.close').click();
+        });
         document.body.appendChild(lastModal);
         lastOpen = targetElement;
       }
@@ -323,8 +326,18 @@ const modals = {
 // Function to show the modal
 function showModal(id) {
   if (modals[id]) {
-    modals[id].style.display = 'block';
-    document.body.style.overflow = 'hidden'; // Disable background scrolling
+    const modal = modals[id];
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden'; 
+
+    if(!modal.init){
+      modal.init = true;
+      modal.addEventListener('click', (event) => {
+        if(event.target == modal){
+          location.hash = '';
+        }
+      });
+    }
   }
 }
 
