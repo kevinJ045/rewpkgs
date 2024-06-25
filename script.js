@@ -214,7 +214,7 @@ async function fetchAndStorePackages(name, url) {
   if (json.packages) {
     for (let pkgName in json.packages) {
       const pkg = { name: pkgName, repo: { name, url }, url: json.packages[pkgName] };
-      let match = json.packages[pkgName].match(/^([^\/]+)\/([^@#]+)(?:@([^#]+))?(?:#(.+))?$/)
+      let match = json.packages[pkgName].match(/^github:([^\/]+)\/([^@#]+)(?:@([^#]+))?(?:#(.+))?$/)
       const [, owner, repoName] = match;
       const filesToFetch = ['app.yaml', 'package.json', 'README.md'];
       for (let file of filesToFetch) {
