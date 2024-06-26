@@ -1,6 +1,7 @@
 ---
 name: Rew Packages
 packages:
+    rew.forge3d: github:kevinj045/rew.forge3d
     rew.logger: github:kevinj045/rew.logger
     rew.rayous: github:kevinj045/rew.rayous
     rew.gtk: github:kevinj045/rew.gtk
