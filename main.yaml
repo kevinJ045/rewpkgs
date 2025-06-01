@@ -1,4 +1,3 @@
----
 name: Rew Packages
 packages:
     rew.forge3d: github:kevinj045/rew.forge3d
@@ -6,5 +5,7 @@ packages:
     rew.rayous: github:kevinj045/rew.rayous
     rew.gtk: github:kevinj045/rew.gtk
     rew.pimmy: github:kevinj045/rew.pimmy
-    test.app: github:kevinj045/test-rew-app 
----
+    test.app:
+        url: github:kevinj045/test-rew-app
+        readme: https://raw.githubusercontent.com/kevinJ045/test-rew-app/refs/heads/main/app.yaml
+        description: Just a test app
